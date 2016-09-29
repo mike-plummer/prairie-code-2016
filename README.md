@@ -1,2 +1,2 @@
-# prairie-code-2016
+# prairiecode-2016
 Presentation materials for Prairie.Code() 2016
