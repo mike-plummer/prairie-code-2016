@@ -1,21 +1,29 @@
 import { Pipe, PipeTransform } from '@angular/core';
 const VOWEL_REGEX: RegExp = /[aeiou]/i;
+const WHITESPACE_REGEX: RegExp = /\s/;
 
 @Pipe({ name: 'translate' })
 export class TranslatePipe implements PipeTransform {
-    transform(value: string): string {
+    public transform(value: string): string {
         if (!value) {
             return '';
         }
-        let results: RegExpExecArray = VOWEL_REGEX.exec(value);
+
+        return value.split(WHITESPACE_REGEX)
+            .map(this.translateWord)
+            .join(' ');
+    }
+
+    private translateWord(word: string): string {
+        let results: RegExpExecArray = VOWEL_REGEX.exec(word);
         if (!results) {
-            return `${value}-ay`;
+            return `${word}-ay`;
         } else {
-            let firstVowelIndex = value.indexOf(results[0]);
+            let firstVowelIndex = word.indexOf(results[0]);
             if (firstVowelIndex === 0) {
-                return `${value}-way`;
+                return `${word}-way`;
             } else {
-                return `${value.substring(firstVowelIndex)}-${value.substring(0, firstVowelIndex)}ay`;
+                return `${word.substring(firstVowelIndex)}-${word.substring(0, firstVowelIndex)}ay`;
             }
         }
     }
