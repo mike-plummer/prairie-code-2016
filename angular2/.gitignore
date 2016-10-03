@@ -1,5 +1,5 @@
 
-/node_modules/
-/prairie-code-2016-angular2.iml
-/.idea/
-/typings/
+node_modules/
+*.iml
+.idea/
+typings/

@@ -8,14 +8,17 @@ import { FactsService } from '../facts/facts.service';
 })
 export class FactsComponent implements OnInit {
 
-    public message: string;
+    public currentFact: string;
 
     constructor(@Inject(FactsService) private factsService: FactsService) {
 
     }
 
     ngOnInit() {
-
+        this.factsService.loadFacts();
     }
 
+    loadFact() {
+        this.currentFact = this.factsService.getFact();
+    }
 }
