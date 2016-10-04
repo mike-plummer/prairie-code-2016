@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, EventEmitter, Output } from '@angular/core';
 import { FactsService } from '../facts/facts.service';
 
 @Component({
@@ -10,6 +10,9 @@ export class FactsComponent implements OnInit {
 
     public currentFact: string;
 
+    @Output()
+    public factGenerated = new EventEmitter<any>();
+
     constructor(@Inject(FactsService) private factsService: FactsService) {
 
     }
@@ -20,5 +23,6 @@ export class FactsComponent implements OnInit {
 
     loadFact() {
         this.currentFact = this.factsService.getFact();
+        this.factGenerated.emit();
     }
 }

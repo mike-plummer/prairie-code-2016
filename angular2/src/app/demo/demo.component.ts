@@ -5,16 +5,15 @@ import { Component, OnInit, Inject } from '@angular/core';
     template: require('./demo.pug'),
     styles: [ require('./demo.scss').toString() ]
 })
-export class DemoComponent implements OnInit {
+export class DemoComponent {
 
-    public message: string;
+    public factCounter: number = 0;
 
     constructor() {
 
     }
 
-    ngOnInit() {
-
+    public incrementFactCounter() {
+        this.factCounter++;
     }
-
 }
