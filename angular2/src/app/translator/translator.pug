@@ -1,4 +1,5 @@
 div.translator
   h2 Translation
-  input([(ngModel)]="message" placeholder="Type here to translate")
-  span Translated: {{ message | translate }}
+  div.content
+    input([(ngModel)]="message" placeholder="Type here to translate")
+    p {{ message | translate }}
