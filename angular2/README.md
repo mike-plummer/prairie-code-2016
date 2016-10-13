@@ -1,6 +1,16 @@
-# theodolite
-Presentation framework written in Angular 2
+# Object Partners Transmogrifier
 
-## Description
-This will eventually be a (basic) presentation framework as a vague shadow of reveal and spectacle. This
-is a proof of concept for a Prairie.Code() 2016 presentation and is not yet functional in any way.
+Demo application for Prairie.Code() 2016 in Des Moines. This is designed
+to be a simple demo of basic Angular 2 concepts with a few of the current
+best-practice tools thrown in including Pug templating and Webpack.
+
+# Instructions
+
+1. Clone repo
+2. `npm install`
+3. `npm start`
+4. Transmogrify!
+5. `Ctrl-C` to quit
+
+# Licensing
+This code is provided under the terms of the MIT license: basically you're free to do whatever you want with it, but no guarantees are made to its validity, stability, or safety. All works referenced by or utilized by this project are the property of their respective copyright holders and retain licensing that may be more restrictive.

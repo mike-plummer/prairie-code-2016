@@ -36,7 +36,7 @@ module.exports = {
       }, {
         test: /\.(pug|jade)$/,
         exclude: /node_modules/,
-        loader: 'html!pug-html-loader'
+        loader: 'html!pug-html-loader?exports=false'
       }, {
         test: /\.(scss|sass)$/,
         loaders: ['style', 'css', 'sass']
@@ -63,7 +63,7 @@ module.exports = {
   },
   plugins: [
     // Optimize IDs so that the resources that are most commonly referenced end up with the shortest Ids (reducing size)
-    new webpack.optimize.OccurenceOrderPlugin(true),
+    new webpack.optimize.OccurrenceOrderPlugin(true),
 
     new webpack.optimize.UglifyJsPlugin({
       // Must disable mangle or else Angular is unhappy and no-worky
@@ -79,7 +79,7 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      title: 'theodolite',
+      title: 'OPI Transmogrifier',
       template: 'src/index.html',
       chunksSortMode: 'dependency'
     }),
