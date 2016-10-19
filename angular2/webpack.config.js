@@ -16,7 +16,7 @@ module.exports = {
     sourceMapFilename: '[name].map',
     chunkFilename: '[id].chunk.js'
   },
-  devtool: 'source-map',
+  // devtool: 'source-map',   // Uncomment to enable SourceMaps
   resolve: {
     alias: {
       assets: __dirname + "/assets",
