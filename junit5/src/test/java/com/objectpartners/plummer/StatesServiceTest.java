@@ -3,9 +3,7 @@ package com.objectpartners.plummer;
 import com.objectpartners.plummer.junit5.ApplicationProperties;
 import com.objectpartners.plummer.junit5.StatesService;
 import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -14,12 +12,10 @@ import java.util.List;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-import static org.hamcrest.collection.IsCollectionWithSize.hasSize;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.DynamicTest.dynamicTest;
 import static org.springframework.test.util.AssertionErrors.assertTrue;
 
-@ExtendWith(SpringExtension.class)
 public class StatesServiceTest extends ApplicationTest {
 
     @Autowired
@@ -27,6 +23,9 @@ public class StatesServiceTest extends ApplicationTest {
 
     @Autowired
     private ApplicationProperties properties;
+
+    @BeforeEach
+    public void init(DependencyTrackerResolver.DependencyTracker tracker) {}
 
     @Test
     public void testAutowiring() {
