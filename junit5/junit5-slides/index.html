@@ -640,13 +640,45 @@
                               <pre class="java">
                                   <code>@Tag("perf")
   @Tag("slow-tests")
-  class PerformanceTest {
+  public class PerformanceTest {
 
       @Test
       @Tag("impossible-tests")
-      void testTheHaltingProblem() {
+      public void testTheHaltingProblem() {
       }
   }</code></pre>
+                          </div>
+                      </div>
+                  </section>
+                  <section>
+                      <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 100px; height: auto;">
+                          <div class="sl-block-content" style="z-index: 10;">
+                              <h1>DISPLAY NAMES</h1>
+                          </div>
+                      </div>
+                      <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 700px; height: 89px; left: 130px; top: 201px;">
+                          <div class="sl-block-content" style="z-index: 12;" data-highlight-theme="solarized-light">
+                              <pre class="java">
+                                  <code>
+@Test
+@DisplayName("My Super Awesome Funtime Test")
+public void reallyGnarlyMethodNameThatWouldOtherwiseBeTheName() {}
+      </code></pre>
+                          </div>
+                      </div>
+                      <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 383px; height: auto;">
+                          <div class="sl-block-content" style="z-index: 10;">
+                              <h1>DISABLING</h1>
+                          </div>
+                      </div>
+                      <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 700px; height: 89px; left: 130px; top: 501px;">
+                          <div class="sl-block-content" style="z-index: 12;" data-highlight-theme="solarized-light">
+                              <pre class="java">
+                                  <code>
+@Test
+@Disabled("Initiates SkyNet, avoid running until Thursday")
+public void singularity() {}
+      </code></pre>
                           </div>
                       </div>
                   </section>
@@ -756,6 +788,24 @@
                       </div>
                   </section>
                   <section>
+                      <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 113px; height: auto;">
+                          <div class="sl-block-content" style="z-index: 10;">
+                              <h1>DYNAMIC TESTS</h1>
+                          </div>
+                      </div>
+                      <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 860px; height: 140px; left: 60px; top: 301px;">
+                          <div class="sl-block-content" style="z-index: 12;" data-highlight-theme="solarized-light">
+                              <pre class="java">
+                                  <code>@TestFactory
+public Collection&lt;DynamicTest&gt; testTenNumbersEqualThemselves() {
+    return IntStream.of(10)
+            .mapToObj(val -> dynamicTest("Test" + val, () -> assertEquals(val, val)))
+            .collect(Collectors.toList());
+}</code></pre>
+                          </div>
+                      </div>
+                  </section>
+                  <section>
                       <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;">
                           <div class="sl-block-content" style="z-index: 11;">
                               <h1>ASSERTIONS</h1>
@@ -860,9 +910,19 @@
                       </div>
                   </section>
                   <section>
-                      <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 270px; height: auto;">
+                      <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;">
                           <div class="sl-block-content">
                               <h1>EXTENSION</h1>
+                          </div>
+                      </div>
+                      <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 900px; left: 32px; top: 304px;">
+                          <div class="sl-block-content fragment" style="z-index: 13;" data-fragment-index="1">
+                              <h2>Replaces @Rule and @ClassRule...</h2>
+                          </div>
+                      </div>
+                      <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 900px; left: 32px; top: 504px;">
+                          <div class="sl-block-content fragment" style="z-index: 13;" data-fragment-index="2">
+                              <h2>...plus a lot more.</h2>
                           </div>
                       </div>
                   </section>
