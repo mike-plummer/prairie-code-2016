@@ -4,6 +4,10 @@ Demo application for Prairie.Code() 2016 in Des Moines. This is designed
 to be a simple demo of basic Angular 2 concepts with a few of the current
 best-practice tools thrown in including Pug templating and Webpack.
 
+# Slides
+
+Just looking for the slides? Clone the repo and open `angular2-slides/index.html` in your browser. Use arrow keys for navigation.
+
 # Instructions
 
 1. Clone repo

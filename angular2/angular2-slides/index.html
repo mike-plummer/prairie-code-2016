@@ -566,7 +566,7 @@
                   </div>
                   <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 800px; height: 150px; left: 80px; top: 200px;">
                       <div class="sl-block-content" style="z-index: 13;" data-highlight-theme="solarized-light">
-                          <pre class="javascript">
+                          <pre class="typescript">
                               <code>import 'zone.js/dist/zone';
 import 'reflect-metadata';
 
@@ -578,7 +578,7 @@ platformBrowserDynamic().bootstrapModule(DemoModule);</code></pre>
                   </div>
                   <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 803px; height: 248px; left: 79px; top: 402px;">
                       <div class="sl-block-content" style="z-index: 14;" data-highlight-theme="solarized-light">
-                          <pre class="javascript">
+                          <pre class="html">
                               <code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
@@ -618,7 +618,7 @@ platformBrowserDynamic().bootstrapModule(DemoModule);</code></pre>
                   </div>
                   <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 887px; height: 241px; left: 36px; top: 319px;">
                       <div class="sl-block-content" style="z-index: 13;" data-highlight-theme="solarized-light">
-                          <pre class="none">
+                          <pre class="typescript">
                               <code>@NgModule({
   imports: [ BrowserModule, FormsModule ],
   exports: [],
@@ -860,9 +860,9 @@ export class DemoModule {
                                       <td>ngSwitch &nbsp;&nbsp;</td>
                                       <td>
                                           <pre>
-                                              <span style="font-size:0.9em">&lt;div [ngSwitch]="whereAmI"&gt;
-&nbsp; &lt;div *ngSwitchCase="Des Moines"&gt;
-&lt;div *ngSwitchDefault&gt;</span>
+                                              <span style="white-space: pre; font-size: 27px" style="font-size:0.9em">&lt;div [ngSwitch]="whereAmI"&gt;
+&nbsp;&lt;div *ngSwitchCase="Des Moines"&gt;
+&nbsp;&lt;div *ngSwitchDefault&gt;</span>
                                           </pre>
                                       </td>
                                   </tr>
@@ -917,7 +917,7 @@ export class DemoModule {
                   </div>
                   <div class="sl-block" data-block-type="code" style="width: 740px; height: 484px; left: 110px; top: 204px;">
                       <div class="sl-block-content" style="z-index: 13;" data-highlight-theme="solarized-light">
-                          <pre class="none">
+                          <pre class="typescript">
                               <code>@Component({
   selector: 'demo',
   template: require('./demo.pug'),
@@ -973,7 +973,7 @@ export class DemoComponent implements OnChanges {
                   </div>
                   <div class="sl-block" data-block-type="code" style="width: 740px; height: 339px; left: 110px; top: 300px;">
                       <div class="sl-block-content" style="z-index: 13;" data-highlight-theme="solarized-light">
-                          <pre class="none">
+                          <pre class="typescript">
                               <code>import { Http } from '@angular/http';
 
 @Injectable()
@@ -1021,7 +1021,7 @@ export class DemoService {
                   </div>
                   <div class="sl-block" data-block-type="code" style="width: 740px; height: 146px; left: 110px; top: 210px;">
                       <div class="sl-block-content" style="z-index: 12;" data-highlight-theme="solarized-light">
-                          <pre class="none">
+                          <pre class="typescript">
                               <code>@Pipe({ name: 'demo' })
 export class DemoPipe implements PipeTransform {
 
@@ -1033,7 +1033,7 @@ export class DemoPipe implements PipeTransform {
                   </div>
                   <div class="sl-block" data-block-type="code" style="width: 740px; height: 146px; left: 110px; top: 420px;">
                       <div class="sl-block-content" style="z-index: 14;" data-highlight-theme="solarized-light">
-                          <pre class="none">
+                          <pre class="html">
                               <code>&lt;div&gt;
 
 &lt;h2&gt;My Demo&lt;/h2&gt;
@@ -1154,14 +1154,19 @@ export class DemoPipe implements PipeTransform {
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				history: true,
-        center: false,
+                center: false,
+
+                margin: 0,
+                minScale: 1,
+                maxScale: 1.5,
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true }
 				]
 			});
 		</script>

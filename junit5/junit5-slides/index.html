@@ -170,7 +170,7 @@
                           <div class="sl-block-content" style="z-index: 12;" data-highlight-theme="solarized-light">
                               <pre class="java">
                                   <code>@RunWith(Parameterized.class)
-  public class TestAllValuesReturned(val state: String): ApplicationTest() {
+  public class TestAllValuesReturned extends ApplicationTest {
 
       @Autowired
       private StatesService dataBean;
@@ -555,9 +555,9 @@
                               <h2>EXCEPTION TESTING</h2>
                           </div>
                       </div>
-                      <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 424px; height: auto;">
+                      <div class="sl-block" data-block-type="text" style="width: 900px; left: 30px; top: 424px; height: auto;">
                           <div class="sl-block-content fragment" style="z-index: 14;" data-fragment-index="2">
-                              <h2>STATIC-SCOPED HANDLERS</h2>
+                              <h2>LACK OF RUNTIME CONTEXT</h2>
                           </div>
                       </div>
                   </section>
@@ -1012,14 +1012,19 @@ public Collection&lt;DynamicTest&gt; testTenNumbersEqualThemselves() {
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				history: true,
-        center: false,
+                center: false,
+
+                margin: 0,
+                minScale: 1,
+                maxScale: 1.5,
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true }
 				]
 			});
 		</script>
