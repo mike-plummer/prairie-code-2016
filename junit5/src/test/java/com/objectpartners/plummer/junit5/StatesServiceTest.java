@@ -1,7 +1,5 @@
-package com.objectpartners.plummer;
+package com.objectpartners.plummer.junit5;
 
-import com.objectpartners.plummer.junit5.ApplicationProperties;
-import com.objectpartners.plummer.junit5.StatesService;
 import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 

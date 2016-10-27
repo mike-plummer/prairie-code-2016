@@ -1,6 +1,5 @@
-package com.objectpartners.plummer;
+package com.objectpartners.plummer.junit5;
 
-import com.objectpartners.plummer.junit5.Application;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;

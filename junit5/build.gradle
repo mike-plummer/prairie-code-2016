@@ -8,7 +8,10 @@ buildscript {
         jacocoVersion = '0.7.7.201606060606'
 	}
 	repositories {
-		mavenCentral()
+        // Use HTTP since Corporate Proxies are evil (╯°□°）╯︵ ┻━┻
+		maven {
+	        url "http://repo1.maven.org/maven2"
+	    }
 	}
 	dependencies {
 		classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
@@ -36,7 +39,10 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 repositories {
-	mavenCentral()
+    // Use HTTP since Corporate Proxies are evil (╯°□°）╯︵ ┻━┻
+	maven {
+		url "http://repo1.maven.org/maven2"
+	}
 }
 
 junitPlatform {
